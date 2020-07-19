@@ -9,12 +9,43 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
+    enum SegmentType: Int {
+        case businessNews = 0
+        case entertainmentAndEnvironment = 1
     }
 
+    @IBOutlet weak var segmentedControll: UISegmentedControl!
+    @IBOutlet weak var businessNewsViewContainer: UIView!
+    @IBOutlet weak var EntertainmentAndEnvironmentViewContainer: UIView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.setupUI()
+    }
 
+    @IBAction func segmentedControllValueChanged(_ sender: UISegmentedControl) {
+        guard let selectedSegment = SegmentType(rawValue: sender.selectedSegmentIndex) else { return }
+        self.updateSelectedSegment(segment: selectedSegment)
+    }
+}
+
+private extension SecondViewController {
+    
+    private func setupUI() {
+        guard let selectedSegment = SegmentType(rawValue: segmentedControll.selectedSegmentIndex) else { return }
+        self.updateSelectedSegment(segment: selectedSegment)
+    }
+    
+    private func updateSelectedSegment(segment: SegmentType) {
+        switch segment {
+        case .businessNews:
+            businessNewsViewContainer.isHidden = false
+            EntertainmentAndEnvironmentViewContainer.isHidden = true
+        case .entertainmentAndEnvironment:
+            businessNewsViewContainer.isHidden = true
+            EntertainmentAndEnvironmentViewContainer.isHidden = false
+        }
+    }
 }
 

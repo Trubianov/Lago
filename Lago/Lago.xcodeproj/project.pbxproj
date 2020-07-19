@@ -14,6 +14,7 @@
 		3A8F012624C4660E006E4734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8F012424C4660E006E4734 /* Main.storyboard */; };
 		3A8F012824C46612006E4734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8F012724C46612006E4734 /* Assets.xcassets */; };
 		3A8F012B24C46612006E4734 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8F012924C46612006E4734 /* LaunchScreen.storyboard */; };
+		3A8F013424C4843D006E4734 /* Feeds.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8F013224C4843D006E4734 /* Feeds.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3A8F012724C46612006E4734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A8F012A24C46612006E4734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A8F012C24C46612006E4734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A8F013324C4843D006E4734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Lago/Base.lproj/Feeds.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 		3A8F011024C4660E006E4734 = {
 			isa = PBXGroup;
 			children = (
+				3A8F013224C4843D006E4734 /* Feeds.storyboard */,
 				3A8F011B24C4660E006E4734 /* Lago */,
 				3A8F011A24C4660E006E4734 /* Products */,
 			);
@@ -130,6 +133,7 @@
 			files = (
 				3A8F012B24C46612006E4734 /* LaunchScreen.storyboard in Resources */,
 				3A8F012824C46612006E4734 /* Assets.xcassets in Resources */,
+				3A8F013424C4843D006E4734 /* Feeds.storyboard in Resources */,
 				3A8F012624C4660E006E4734 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,6 +169,14 @@
 				3A8F012A24C46612006E4734 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3A8F013224C4843D006E4734 /* Feeds.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A8F013324C4843D006E4734 /* Base */,
+			);
+			name = Feeds.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

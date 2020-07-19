@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8rJ-Kc-sve">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Second-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Lago" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GFu-TW-QYU">
+                                <rect key="frame" x="141.5" y="44" width="131" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControllValueChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="f9J-P1-7uR"/>
+                                </connections>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zzm-TA-vbs" userLabel="BusinessNewsView">
+                                <rect key="frame" x="8" y="91" width="398" height="771"/>
+                                <connections>
+                                    <segue destination="Akn-r1-cxD" kind="embed" id="jSG-04-Xb7"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fKj-aF-fPl" userLabel=" EntertainmentAndEnvironmentView">
+                                <rect key="frame" x="8" y="91" width="398" height="771"/>
+                                <connections>
+                                    <segue destination="RVI-fD-7jJ" kind="embed" id="A3U-Uy-Fao"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Zzm-TA-vbs" firstAttribute="bottom" secondItem="O1u-W8-tvY" secondAttribute="bottom" id="7wP-1u-tLt"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="Zzm-TA-vbs" secondAttribute="trailing" constant="8" id="89p-jw-2Sw"/>
+                            <constraint firstItem="fKj-aF-fPl" firstAttribute="width" secondItem="Zzm-TA-vbs" secondAttribute="width" id="HIV-Ph-82a"/>
+                            <constraint firstItem="Zzm-TA-vbs" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="8" id="Ihw-vh-Y6h"/>
+                            <constraint firstItem="Zzm-TA-vbs" firstAttribute="top" secondItem="GFu-TW-QYU" secondAttribute="bottom" constant="16" id="bwR-8o-6Nm"/>
+                            <constraint firstItem="fKj-aF-fPl" firstAttribute="centerY" secondItem="Zzm-TA-vbs" secondAttribute="centerY" id="q5v-fz-J1a"/>
+                            <constraint firstItem="GFu-TW-QYU" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="sqP-kK-rJO"/>
+                            <constraint firstItem="fKj-aF-fPl" firstAttribute="height" secondItem="Zzm-TA-vbs" secondAttribute="height" id="tec-av-bv0"/>
+                            <constraint firstItem="GFu-TW-QYU" firstAttribute="centerX" secondItem="O1u-W8-tvY" secondAttribute="centerX" id="wJ3-QB-1Ch"/>
+                            <constraint firstItem="fKj-aF-fPl" firstAttribute="centerX" secondItem="Zzm-TA-vbs" secondAttribute="centerX" id="xKw-Mq-srQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="EntertainmentAndEnvironmentViewContainer" destination="fKj-aF-fPl" id="HVM-1z-gK8"/>
+                        <outlet property="businessNewsViewContainer" destination="Zzm-TA-vbs" id="5Wo-M9-6Ou"/>
+                        <outlet property="segmentedControll" destination="GFu-TW-QYU" id="chU-ts-zAE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.27536231884062" y="359.59821428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="E0M-WX-e2X">
+            <objects>
+                <viewController id="Akn-r1-cxD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cS1-us-Omf">
+                        <rect key="frame" x="0.0" y="0.0" width="398" height="771"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ewU-JH-gbo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="509" y="1052"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Chr-F8-lNV">
+            <objects>
+                <viewController id="RVI-fD-7jJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gOo-pk-9J0">
+                        <rect key="frame" x="0.0" y="0.0" width="398" height="771"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G7a-JH-4jM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1454" y="1052"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="second" width="30" height="30"/>
+    </resources>
+</document>
