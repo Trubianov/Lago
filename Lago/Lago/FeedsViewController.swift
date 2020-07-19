@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class FeedsViewController: UIViewController {
     
     enum SegmentType: Int {
         case businessNews = 0
@@ -30,7 +30,7 @@ class SecondViewController: UIViewController {
     }
 }
 
-private extension SecondViewController {
+private extension FeedsViewController {
     
     private func setupUI() {
         guard let selectedSegment = SegmentType(rawValue: segmentedControll.selectedSegmentIndex) else { return }
