@@ -10,8 +10,10 @@ import Foundation
 
 protocol FeedsStorageProtocol {
     var lifeStyleModels: [LifeStyle] { get }
+    var RSSWSJDModels: [RSSWSJD] { get }
 }
 
 class FeedsStorageManager: FeedsStorageProtocol {
     var lifeStyleModels = [LifeStyle]()
+    var RSSWSJDModels = [RSSWSJD]()
 }
