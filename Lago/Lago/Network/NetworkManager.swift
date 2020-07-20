@@ -66,6 +66,24 @@ class NetworkManager {
     }
     
     private static func downloadRSSWorldNews(feedsStorage: FeedsStorageManager) {
-        
+        guard let url = baseURL else { return }
+        let worldNewURL = url.appendingPathComponent(worldNewsFeed, isDirectory: false)
+        let task = URLSession.shared.dataTask(with: worldNewURL) { data, response, error in
+            guard let data = data, error == nil else {
+                print("Failed download \(worldNewsFeed): \(String(describing: error))")
+                return
+            }
+
+            let parser = XMLParser(data: data)
+            let worldNewsXMLParser = WorldNewXMLDelegate()
+            parser.delegate = worldNewsXMLParser
+            if parser.parse() {
+                print("Success parsed \(worldNewsFeed)")
+                feedsStorage.worldNewsModels = worldNewsXMLParser.WorldNewsItems
+            } else {
+                print("Failed parse \(worldNewsFeed)")
+            }
+        }
+        task.resume()
     }
 }

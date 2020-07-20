@@ -22,6 +22,8 @@
 		3A8F014424C5FB65006E4734 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F014324C5FB65006E4734 /* StorageManager.swift */; };
 		3A8F014724C60EA8006E4734 /* RSSWSJDXMLDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F014624C60EA8006E4734 /* RSSWSJDXMLDelegate.swift */; };
 		3A8F014924C60FAA006E4734 /* RSSWSJD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F014824C60FAA006E4734 /* RSSWSJD.swift */; };
+		3A8F014B24C61530006E4734 /* WorldNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F014A24C61530006E4734 /* WorldNews.swift */; };
+		3A8F014D24C615E3006E4734 /* WorldNewXMLDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F014C24C615E3006E4734 /* WorldNewXMLDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		3A8F014324C5FB65006E4734 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		3A8F014624C60EA8006E4734 /* RSSWSJDXMLDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSWSJDXMLDelegate.swift; sourceTree = "<group>"; };
 		3A8F014824C60FAA006E4734 /* RSSWSJD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSWSJD.swift; sourceTree = "<group>"; };
+		3A8F014A24C61530006E4734 /* WorldNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldNews.swift; sourceTree = "<group>"; };
+		3A8F014C24C615E3006E4734 /* WorldNewXMLDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldNewXMLDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 			children = (
 				3A8F013924C5EDB2006E4734 /* LifeStyleRSSXMLDelegate.swift */,
 				3A8F014624C60EA8006E4734 /* RSSWSJDXMLDelegate.swift */,
+				3A8F014C24C615E3006E4734 /* WorldNewXMLDelegate.swift */,
 			);
 			path = "XML parsers";
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 			children = (
 				3A8F014024C5FA55006E4734 /* LifeStyleModel.swift */,
 				3A8F014824C60FAA006E4734 /* RSSWSJD.swift */,
+				3A8F014A24C61530006E4734 /* WorldNews.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -225,10 +231,12 @@
 				3A8F014924C60FAA006E4734 /* RSSWSJD.swift in Sources */,
 				3A8F012324C4660E006E4734 /* FeedsViewController.swift in Sources */,
 				3A8F014724C60EA8006E4734 /* RSSWSJDXMLDelegate.swift in Sources */,
+				3A8F014B24C61530006E4734 /* WorldNews.swift in Sources */,
 				3A8F014124C5FA55006E4734 /* LifeStyleModel.swift in Sources */,
 				3A8F013A24C5EDB2006E4734 /* LifeStyleRSSXMLDelegate.swift in Sources */,
 				3A8F014424C5FB65006E4734 /* StorageManager.swift in Sources */,
 				3A8F012124C4660E006E4734 /* InfoViewController.swift in Sources */,
+				3A8F014D24C615E3006E4734 /* WorldNewXMLDelegate.swift in Sources */,
 				3A8F013824C4B297006E4734 /* NetworkManager.swift in Sources */,
 				3A8F011D24C4660E006E4734 /* AppDelegate.swift in Sources */,
 				3A8F011F24C4660E006E4734 /* SceneDelegate.swift in Sources */,
