@@ -15,6 +15,7 @@
 		3A8F012824C46612006E4734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8F012724C46612006E4734 /* Assets.xcassets */; };
 		3A8F012B24C46612006E4734 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8F012924C46612006E4734 /* LaunchScreen.storyboard */; };
 		3A8F013424C4843D006E4734 /* Feeds.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8F013224C4843D006E4734 /* Feeds.storyboard */; };
+		3A8F013824C4B297006E4734 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F013724C4B297006E4734 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3A8F012A24C46612006E4734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A8F012C24C46612006E4734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A8F013324C4843D006E4734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Lago/Base.lproj/Feeds.storyboard; sourceTree = "<group>"; };
+		3A8F013724C4B297006E4734 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,15 +64,32 @@
 			children = (
 				3A8F011C24C4660E006E4734 /* AppDelegate.swift */,
 				3A8F011E24C4660E006E4734 /* SceneDelegate.swift */,
-				3A8F012024C4660E006E4734 /* InfoViewController.swift */,
-				3A8F012224C4660E006E4734 /* FeedsViewController.swift */,
-				3A8F013224C4843D006E4734 /* Feeds.storyboard */,
-				3A8F012424C4660E006E4734 /* Main.storyboard */,
+				3A8F013724C4B297006E4734 /* NetworkManager.swift */,
+				3A8F013524C4B220006E4734 /* ViewControllers */,
+				3A8F013624C4B22F006E4734 /* Storyboards */,
 				3A8F012724C46612006E4734 /* Assets.xcassets */,
 				3A8F012924C46612006E4734 /* LaunchScreen.storyboard */,
 				3A8F012C24C46612006E4734 /* Info.plist */,
 			);
 			path = Lago;
+			sourceTree = "<group>";
+		};
+		3A8F013524C4B220006E4734 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A8F012024C4660E006E4734 /* InfoViewController.swift */,
+				3A8F012224C4660E006E4734 /* FeedsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3A8F013624C4B22F006E4734 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3A8F013224C4843D006E4734 /* Feeds.storyboard */,
+				3A8F012424C4660E006E4734 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +166,7 @@
 			files = (
 				3A8F012324C4660E006E4734 /* FeedsViewController.swift in Sources */,
 				3A8F012124C4660E006E4734 /* InfoViewController.swift in Sources */,
+				3A8F013824C4B297006E4734 /* NetworkManager.swift in Sources */,
 				3A8F011D24C4660E006E4734 /* AppDelegate.swift in Sources */,
 				3A8F011F24C4660E006E4734 /* SceneDelegate.swift in Sources */,
 			);
