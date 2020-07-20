@@ -16,10 +16,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GFu-TW-QYU">
-                                <rect key="frame" x="141.5" y="44" width="131" height="32"/>
+                                <rect key="frame" x="114.5" y="44" width="185" height="32"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="Life Style"/>
+                                    <segment title="Enert&amp;Envir"/>
                                 </segments>
                                 <connections>
                                     <action selector="segmentedControllValueChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="f9J-P1-7uR"/>
@@ -64,20 +64,32 @@
             </objects>
             <point key="canvasLocation" x="749.27536231884062" y="359.59821428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Life Style View Controller-->
         <scene sceneID="E0M-WX-e2X">
             <objects>
-                <viewController id="Akn-r1-cxD" sceneMemberID="viewController">
+                <viewController id="Akn-r1-cxD" customClass="LifeStyleViewController" customModule="Lago" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cS1-us-Omf">
                         <rect key="frame" x="0.0" y="0.0" width="398" height="771"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E51-67-Xp4">
+                                <rect key="frame" x="0.0" y="0.0" width="398" height="771"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="E51-67-Xp4" firstAttribute="trailing" secondItem="dAm-bP-e9x" secondAttribute="trailing" id="CiD-KO-uu2"/>
+                            <constraint firstItem="E51-67-Xp4" firstAttribute="top" secondItem="cS1-us-Omf" secondAttribute="top" id="ERc-MV-G6e"/>
+                            <constraint firstItem="E51-67-Xp4" firstAttribute="leading" secondItem="dAm-bP-e9x" secondAttribute="leading" id="i3O-a5-OLN"/>
+                            <constraint firstItem="E51-67-Xp4" firstAttribute="bottom" secondItem="dAm-bP-e9x" secondAttribute="bottom" id="ucg-cm-vQe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dAm-bP-e9x"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ewU-JH-gbo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="509" y="1052"/>
+            <point key="canvasLocation" x="508.69565217391306" y="1051.6741071428571"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Chr-F8-lNV">
@@ -86,13 +98,25 @@
                     <view key="view" contentMode="scaleToFill" id="gOo-pk-9J0">
                         <rect key="frame" x="0.0" y="0.0" width="398" height="771"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f9x-L0-4Ik">
+                                <rect key="frame" x="0.0" y="0.0" width="398" height="771"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="f9x-L0-4Ik" firstAttribute="bottom" secondItem="bcE-6f-KZI" secondAttribute="bottom" id="B76-KP-eIL"/>
+                            <constraint firstItem="f9x-L0-4Ik" firstAttribute="trailing" secondItem="bcE-6f-KZI" secondAttribute="trailing" id="nDz-Ko-45z"/>
+                            <constraint firstItem="f9x-L0-4Ik" firstAttribute="top" secondItem="gOo-pk-9J0" secondAttribute="top" id="v9K-EY-SXT"/>
+                            <constraint firstItem="f9x-L0-4Ik" firstAttribute="leading" secondItem="bcE-6f-KZI" secondAttribute="leading" id="xsj-xL-MQY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bcE-6f-KZI"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7a-JH-4jM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1454" y="1052"/>
+            <point key="canvasLocation" x="1453.6231884057972" y="1051.6741071428571"/>
         </scene>
     </scenes>
     <resources>

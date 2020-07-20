@@ -16,6 +16,8 @@
 		3A8F012B24C46612006E4734 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8F012924C46612006E4734 /* LaunchScreen.storyboard */; };
 		3A8F013424C4843D006E4734 /* Feeds.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8F013224C4843D006E4734 /* Feeds.storyboard */; };
 		3A8F013824C4B297006E4734 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F013724C4B297006E4734 /* NetworkManager.swift */; };
+		3A8F013A24C5EDB2006E4734 /* LifeStyleRSSXMLDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F013924C5EDB2006E4734 /* LifeStyleRSSXMLDelegate.swift */; };
+		3A8F013E24C5F5A6006E4734 /* LifeStyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F013D24C5F5A6006E4734 /* LifeStyleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		3A8F012C24C46612006E4734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A8F013324C4843D006E4734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Lago/Base.lproj/Feeds.storyboard; sourceTree = "<group>"; };
 		3A8F013724C4B297006E4734 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		3A8F013924C5EDB2006E4734 /* LifeStyleRSSXMLDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeStyleRSSXMLDelegate.swift; sourceTree = "<group>"; };
+		3A8F013D24C5F5A6006E4734 /* LifeStyleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeStyleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +68,8 @@
 			children = (
 				3A8F011C24C4660E006E4734 /* AppDelegate.swift */,
 				3A8F011E24C4660E006E4734 /* SceneDelegate.swift */,
-				3A8F013724C4B297006E4734 /* NetworkManager.swift */,
+				3A8F013B24C5F574006E4734 /* Network */,
+				3A8F013C24C5F583006E4734 /* XML parsers */,
 				3A8F013524C4B220006E4734 /* ViewControllers */,
 				3A8F013624C4B22F006E4734 /* Storyboards */,
 				3A8F012724C46612006E4734 /* Assets.xcassets */,
@@ -78,7 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				3A8F012024C4660E006E4734 /* InfoViewController.swift */,
-				3A8F012224C4660E006E4734 /* FeedsViewController.swift */,
+				3A8F013F24C5F5B5006E4734 /* Feed view controllers */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -90,6 +95,31 @@
 				3A8F012424C4660E006E4734 /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3A8F013B24C5F574006E4734 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3A8F013724C4B297006E4734 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3A8F013C24C5F583006E4734 /* XML parsers */ = {
+			isa = PBXGroup;
+			children = (
+				3A8F013924C5EDB2006E4734 /* LifeStyleRSSXMLDelegate.swift */,
+			);
+			path = "XML parsers";
+			sourceTree = "<group>";
+		};
+		3A8F013F24C5F5B5006E4734 /* Feed view controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A8F012224C4660E006E4734 /* FeedsViewController.swift */,
+				3A8F013D24C5F5A6006E4734 /* LifeStyleViewController.swift */,
+			);
+			path = "Feed view controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,10 +195,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A8F012324C4660E006E4734 /* FeedsViewController.swift in Sources */,
+				3A8F013A24C5EDB2006E4734 /* LifeStyleRSSXMLDelegate.swift in Sources */,
 				3A8F012124C4660E006E4734 /* InfoViewController.swift in Sources */,
 				3A8F013824C4B297006E4734 /* NetworkManager.swift in Sources */,
 				3A8F011D24C4660E006E4734 /* AppDelegate.swift in Sources */,
 				3A8F011F24C4660E006E4734 /* SceneDelegate.swift in Sources */,
+				3A8F013E24C5F5A6006E4734 /* LifeStyleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
