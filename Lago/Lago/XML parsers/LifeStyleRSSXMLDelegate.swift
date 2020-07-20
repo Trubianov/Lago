@@ -8,13 +8,6 @@
 
 import Foundation
 
-struct LifeStyle {
-    let title: String
-    let link: String
-    let description: String
-    let pubDate: Date
-}
-
 class LifeStyleRSSXMLDelegate: NSObject, XMLParserDelegate {
     
     var lifeStyleItems = [LifeStyle]()
