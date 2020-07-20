@@ -19,6 +19,7 @@
 		3A8F013A24C5EDB2006E4734 /* LifeStyleRSSXMLDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F013924C5EDB2006E4734 /* LifeStyleRSSXMLDelegate.swift */; };
 		3A8F013E24C5F5A6006E4734 /* LifeStyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F013D24C5F5A6006E4734 /* LifeStyleViewController.swift */; };
 		3A8F014124C5FA55006E4734 /* LifeStyleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F014024C5FA55006E4734 /* LifeStyleModel.swift */; };
+		3A8F014424C5FB65006E4734 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F014324C5FB65006E4734 /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		3A8F013924C5EDB2006E4734 /* LifeStyleRSSXMLDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeStyleRSSXMLDelegate.swift; sourceTree = "<group>"; };
 		3A8F013D24C5F5A6006E4734 /* LifeStyleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeStyleViewController.swift; sourceTree = "<group>"; };
 		3A8F014024C5FA55006E4734 /* LifeStyleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeStyleModel.swift; sourceTree = "<group>"; };
+		3A8F014324C5FB65006E4734 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				3A8F011C24C4660E006E4734 /* AppDelegate.swift */,
 				3A8F011E24C4660E006E4734 /* SceneDelegate.swift */,
 				3A8F014224C5FA74006E4734 /* Models */,
+				3A8F014524C5FB74006E4734 /* Storage */,
 				3A8F013B24C5F574006E4734 /* Network */,
 				3A8F013C24C5F583006E4734 /* XML parsers */,
 				3A8F013524C4B220006E4734 /* ViewControllers */,
@@ -131,6 +134,14 @@
 				3A8F014024C5FA55006E4734 /* LifeStyleModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3A8F014524C5FB74006E4734 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				3A8F014324C5FB65006E4734 /* StorageManager.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +219,7 @@
 				3A8F012324C4660E006E4734 /* FeedsViewController.swift in Sources */,
 				3A8F014124C5FA55006E4734 /* LifeStyleModel.swift in Sources */,
 				3A8F013A24C5EDB2006E4734 /* LifeStyleRSSXMLDelegate.swift in Sources */,
+				3A8F014424C5FB65006E4734 /* StorageManager.swift in Sources */,
 				3A8F012124C4660E006E4734 /* InfoViewController.swift in Sources */,
 				3A8F013824C4B297006E4734 /* NetworkManager.swift in Sources */,
 				3A8F011D24C4660E006E4734 /* AppDelegate.swift in Sources */,

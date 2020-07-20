@@ -11,10 +11,10 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    let feedsStorage = FeedsStorageManager()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        NetworkManager.downloadLifeStyleFeed()
+        NetworkManager.downloadFeeds(feedsStorage: feedsStorage)
         return true
     }
 

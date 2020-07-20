@@ -11,11 +11,17 @@ import Foundation
 class NetworkManager {
     
     static let baseURL = URL(string: "https://feeds.a.dj.com/rss")
+    static let lifeStyleFeed = "RSSLifestyle.xml"
     
+    static func downloadFeeds(feedsStorage: FeedsStorageManager) {
+        self.downloadLifeStyleFeed(feedsStorage: feedsStorage)
+        self.downloadRSSWorldNews(feedsStorage: feedsStorage)
+        self.downloadRSSWSJD(feedsStorage: feedsStorage)
+    }
     
-    static func downloadLifeStyleFeed() {
+    private static func downloadLifeStyleFeed(feedsStorage: FeedsStorageManager) {
         guard let url = baseURL else { return }
-        let lifeStyleURL = url.appendingPathComponent("RSSLifestyle.xml", isDirectory: false)
+        let lifeStyleURL = url.appendingPathComponent(lifeStyleFeed, isDirectory: false)
         let task = URLSession.shared.dataTask(with: lifeStyleURL) { data, response, error in
             guard let data = data, error == nil else {
                 print("Failed download RSSLifestyle xml: \(String(describing: error))")
@@ -27,6 +33,7 @@ class NetworkManager {
             parser.delegate = lifeStyleXMLParser
             if parser.parse() {
                 print("Success parsed life style feed")
+                feedsStorage.lifeStyleModels = lifeStyleXMLParser.lifeStyleItems
             } else {
                 print("Failed parse life style feed")
             }
@@ -34,11 +41,11 @@ class NetworkManager {
         task.resume()
     }
     
-    func downloadRSSWSJD() {
+    private static func downloadRSSWSJD(feedsStorage: FeedsStorageManager) {
         
     }
     
-    func downloadRSSWorldNews() {
+    private static func downloadRSSWorldNews(feedsStorage: FeedsStorageManager) {
         
     }
 }
