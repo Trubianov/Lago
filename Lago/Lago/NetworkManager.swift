@@ -7,7 +7,6 @@
 //
 
 import Foundation
-<<<<<<< HEAD
 
 class NetworkManager {
     
@@ -37,5 +36,3 @@ class NetworkManager {
         
     }
 }
-=======
->>>>>>> 79358ad602c6c1ecdbd0fdde575339d8bda8a738
