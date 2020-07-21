@@ -10,4 +10,22 @@ import UIKit
 
 class LifeStyleViewController: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
+    
+    let dataSource = LifeStyelTableViewDataSource()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        func setupDataSource()
+    }
+    
+    private func setupDataSource() {
+        if let items = self.storage?.lifeStyleModels {
+            dataSource.setup(lifeStyleItems: items)
+        }
+        
+        self.storage?.lifeStyleModelsUpdated = { [weak self] lifeStyleModels in
+            self?.dataSource.setup(lifeStyleItems: lifeStyleModels)
+        }
+    }
 }

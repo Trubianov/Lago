@@ -35,7 +35,7 @@ class NetworkManager {
             parser.delegate = lifeStyleXMLParser
             if parser.parse() {
                 print("Success parsed life style feed")
-                feedsStorage.lifeStyleModels = lifeStyleXMLParser.lifeStyleItems
+                feedsStorage.setupLifeStyleModels(lifeStyleModels: lifeStyleXMLParser.lifeStyleItems)
             } else {
                 print("Failed parse life style feed")
             }
@@ -57,7 +57,7 @@ class NetworkManager {
             parser.delegate = RSSWSJDXMLParser
             if parser.parse() {
                 print("Success parsed RSS WSJD feed")
-                feedsStorage.RSSWSJDModels = RSSWSJDXMLParser.RSSWSJDItems
+                feedsStorage.setupRSSWSJDModels(RSSWSJDModels: RSSWSJDXMLParser.RSSWSJDItems)
             } else {
                 print("Failed parse RSS WSJD feed")
             }
@@ -79,7 +79,7 @@ class NetworkManager {
             parser.delegate = worldNewsXMLParser
             if parser.parse() {
                 print("Success parsed \(worldNewsFeed)")
-                feedsStorage.worldNewsModels = worldNewsXMLParser.WorldNewsItems
+                feedsStorage.setupWorldNewsModels(worldNewsModels: worldNewsXMLParser.WorldNewsItems)
             } else {
                 print("Failed parse \(worldNewsFeed)")
             }
