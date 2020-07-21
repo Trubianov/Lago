@@ -16,7 +16,9 @@ class LifeStyleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        func setupDataSource()
+        self.tableView.dataSource = self.dataSource
+        self.tableView.delegate = self
+        self.setupDataSource()
     }
     
     private func setupDataSource() {
@@ -28,4 +30,8 @@ class LifeStyleViewController: UIViewController {
             self?.dataSource.setup(lifeStyleItems: lifeStyleModels)
         }
     }
+}
+
+extension LifeStyleViewController: UITableViewDelegate {
+    
 }

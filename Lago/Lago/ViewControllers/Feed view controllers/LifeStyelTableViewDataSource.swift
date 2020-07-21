@@ -23,6 +23,11 @@ class LifeStyelTableViewDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: LifeStyleTableViewCell.reuseID, for: indexPath)
+        if let lifeStyleCell = cell as? LifeStyleTableViewCell {
+            let item = self.lifeStyleItems[indexPath.row]
+            lifeStyleCell.setup(lifstyleItem: item)
+        }
+        return cell
     }
 }
