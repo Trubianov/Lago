@@ -7,12 +7,12 @@
 //
 
 import UIKit
+import Kingfisher
 
 class LifeStyleTableViewCell: UITableViewCell {
     static let reuseID = "LifeStyleTableViewCell"
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var mainImageView: UIImageView!
     
     func setup(lifstyleItem: LifeStyle) {
         self.titleLabel.text = lifstyleItem.title
