@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3A20DE0F24C6E93E006E6FE4 /* LifeStyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20DE0E24C6E93E006E6FE4 /* LifeStyleTableViewCell.swift */; };
+		3A20DE1124C6EEF5006E6FE4 /* LifeStyleDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20DE1024C6EEF5006E6FE4 /* LifeStyleDetailedViewController.swift */; };
 		3A8F011D24C4660E006E4734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F011C24C4660E006E4734 /* AppDelegate.swift */; };
 		3A8F011F24C4660E006E4734 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F011E24C4660E006E4734 /* SceneDelegate.swift */; };
 		3A8F012124C4660E006E4734 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F012024C4660E006E4734 /* InfoViewController.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		3A20DE0E24C6E93E006E6FE4 /* LifeStyleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeStyleTableViewCell.swift; sourceTree = "<group>"; };
+		3A20DE1024C6EEF5006E6FE4 /* LifeStyleDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeStyleDetailedViewController.swift; sourceTree = "<group>"; };
 		3A8F011924C4660E006E4734 /* Lago.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lago.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8F011C24C4660E006E4734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A8F011E24C4660E006E4734 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A20DE1224C6EF1D006E6FE4 /* LifeStyle */ = {
+			isa = PBXGroup;
+			children = (
+				3A8F013D24C5F5A6006E4734 /* LifeStyleViewController.swift */,
+				3A8F014E24C622CD006E4734 /* LifeStyelTableViewDataSource.swift */,
+				3A20DE0E24C6E93E006E6FE4 /* LifeStyleTableViewCell.swift */,
+				3A20DE1024C6EEF5006E6FE4 /* LifeStyleDetailedViewController.swift */,
+			);
+			path = LifeStyle;
+			sourceTree = "<group>";
+		};
 		3A8F011024C4660E006E4734 = {
 			isa = PBXGroup;
 			children = (
@@ -147,9 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				3A8F012224C4660E006E4734 /* FeedsViewController.swift */,
-				3A8F013D24C5F5A6006E4734 /* LifeStyleViewController.swift */,
-				3A8F014E24C622CD006E4734 /* LifeStyelTableViewDataSource.swift */,
-				3A20DE0E24C6E93E006E6FE4 /* LifeStyleTableViewCell.swift */,
+				3A20DE1224C6EF1D006E6FE4 /* LifeStyle */,
 			);
 			path = "Feed view controllers";
 			sourceTree = "<group>";
@@ -186,7 +197,6 @@
 				C736D1E5FADC04F05586169B /* Pods-Lago.debug.xcconfig */,
 				7568A55BE80E40BF48228933 /* Pods-Lago.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -318,6 +328,7 @@
 				3A8F014924C60FAA006E4734 /* RSSWSJD.swift in Sources */,
 				3A8F012324C4660E006E4734 /* FeedsViewController.swift in Sources */,
 				3A8F014724C60EA8006E4734 /* RSSWSJDXMLDelegate.swift in Sources */,
+				3A20DE1124C6EEF5006E6FE4 /* LifeStyleDetailedViewController.swift in Sources */,
 				3A8F015124C6E340006E4734 /* ViewController+Storage.swift in Sources */,
 				3A8F014B24C61530006E4734 /* WorldNews.swift in Sources */,
 				3A8F014124C5FA55006E4734 /* LifeStyleModel.swift in Sources */,

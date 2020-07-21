@@ -13,6 +13,7 @@ class LifeStyleViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let dataSource = LifeStyelTableViewDataSource()
+    private var selectedLifeStyleItem: LifeStyle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +31,19 @@ class LifeStyleViewController: UIViewController {
             self?.dataSource.setup(lifeStyleItems: lifeStyleModels)
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "LifeStyleDetails",
+            let lifeStyleDetailedController = segue.destination as? LifeStyleDetailedViewController {
+            lifeStyleDetailedController.lifeStyle = self.selectedLifeStyleItem
+        }
+    }
 }
 
 extension LifeStyleViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        self.selectedLifeStyleItem = dataSource.lifeStyleItems[indexPath.row]
+        return indexPath
+    }
 }

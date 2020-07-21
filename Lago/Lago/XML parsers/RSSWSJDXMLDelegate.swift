@@ -53,7 +53,7 @@ class RSSWSJDXMLDelegate: NSObject, XMLParserDelegate {
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         if elementName == "item" {
-            let rssWSJD = RSSWSJD(title: title, link: link, description: description, pubDate: pubDate, articletype: articletype)
+            let rssWSJD = RSSWSJD(title: title, link: link, description: itemDescription, pubDate: pubDate, articletype: articletype)
             RSSWSJDItems.append(rssWSJD)
         }
     }

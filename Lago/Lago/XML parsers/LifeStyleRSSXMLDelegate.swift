@@ -50,7 +50,7 @@ class LifeStyleRSSXMLDelegate: NSObject, XMLParserDelegate {
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         if elementName == "item" {
-            let lifeStyle = LifeStyle(title: title, link: link, description: description, pubDate: pubDate)
+            let lifeStyle = LifeStyle(title: title, link: link, description: itemDescription, pubDate: pubDate)
             lifeStyleItems.append(lifeStyle)
         }
     }

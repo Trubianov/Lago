@@ -10,7 +10,7 @@ import UIKit
 
 class LifeStyelTableViewDataSource: NSObject, UITableViewDataSource {
     
-    private var lifeStyleItems = [LifeStyle]()
+    private(set) var lifeStyleItems = [LifeStyle]()
     
     func setup(lifeStyleItems: [LifeStyle]) {
         self.lifeStyleItems = lifeStyleItems
