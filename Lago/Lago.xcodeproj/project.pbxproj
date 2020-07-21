@@ -27,6 +27,7 @@
 		3A8F014D24C615E3006E4734 /* WorldNewXMLDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F014C24C615E3006E4734 /* WorldNewXMLDelegate.swift */; };
 		3A8F014F24C622CD006E4734 /* LifeStyelTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F014E24C622CD006E4734 /* LifeStyelTableViewDataSource.swift */; };
 		3A8F015124C6E340006E4734 /* ViewController+Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F015024C6E340006E4734 /* ViewController+Storage.swift */; };
+		9E9467D74436379E35480389 /* Pods_Lago.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592F8A62D8CB76FA18D349AD /* Pods_Lago.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,9 @@
 		3A8F014C24C615E3006E4734 /* WorldNewXMLDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldNewXMLDelegate.swift; sourceTree = "<group>"; };
 		3A8F014E24C622CD006E4734 /* LifeStyelTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeStyelTableViewDataSource.swift; sourceTree = "<group>"; };
 		3A8F015024C6E340006E4734 /* ViewController+Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Storage.swift"; sourceTree = "<group>"; };
+		592F8A62D8CB76FA18D349AD /* Pods_Lago.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lago.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7568A55BE80E40BF48228933 /* Pods-Lago.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lago.release.xcconfig"; path = "Target Support Files/Pods-Lago/Pods-Lago.release.xcconfig"; sourceTree = "<group>"; };
+		C736D1E5FADC04F05586169B /* Pods-Lago.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lago.debug.xcconfig"; path = "Target Support Files/Pods-Lago/Pods-Lago.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E9467D74436379E35480389 /* Pods_Lago.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +75,8 @@
 			children = (
 				3A8F011B24C4660E006E4734 /* Lago */,
 				3A8F011A24C4660E006E4734 /* Products */,
+				6C3C0946D728BD2EC45706F9 /* Pods */,
+				DA022CF1ACB75C99AA97697B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,6 +180,24 @@
 			path = extension;
 			sourceTree = "<group>";
 		};
+		6C3C0946D728BD2EC45706F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C736D1E5FADC04F05586169B /* Pods-Lago.debug.xcconfig */,
+				7568A55BE80E40BF48228933 /* Pods-Lago.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DA022CF1ACB75C99AA97697B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				592F8A62D8CB76FA18D349AD /* Pods_Lago.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -180,6 +205,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A8F012F24C46612006E4734 /* Build configuration list for PBXNativeTarget "Lago" */;
 			buildPhases = (
+				A4A66AAE510308326E4E8D4B /* [CP] Check Pods Manifest.lock */,
 				3A8F011524C4660E006E4734 /* Sources */,
 				3A8F011624C4660E006E4734 /* Frameworks */,
 				3A8F011724C4660E006E4734 /* Resources */,
@@ -239,6 +265,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A4A66AAE510308326E4E8D4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lago-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3A8F011524C4660E006E4734 /* Sources */ = {
@@ -410,6 +461,7 @@
 		};
 		3A8F013024C46612006E4734 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C736D1E5FADC04F05586169B /* Pods-Lago.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -428,6 +480,7 @@
 		};
 		3A8F013124C46612006E4734 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7568A55BE80E40BF48228933 /* Pods-Lago.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
