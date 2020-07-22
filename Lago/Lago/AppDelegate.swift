@@ -12,9 +12,9 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     let feedsStorage = FeedsStorageManager()
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        NetworkManager.downloadFeeds(feedsStorage: feedsStorage)
+        NetworkManager.startUpdateFeeds(feedsStorage: feedsStorage)
         return true
     }
 

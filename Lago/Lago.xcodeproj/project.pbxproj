@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3A20DE0F24C6E93E006E6FE4 /* LifeStyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20DE0E24C6E93E006E6FE4 /* LifeStyleTableViewCell.swift */; };
 		3A20DE1124C6EEF5006E6FE4 /* LifeStyleDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20DE1024C6EEF5006E6FE4 /* LifeStyleDetailedViewController.swift */; };
+		3A20DE1424C86A96006E6FE4 /* WorldNewAndWSJD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20DE1324C86A96006E6FE4 /* WorldNewAndWSJD.swift */; };
 		3A8F011D24C4660E006E4734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F011C24C4660E006E4734 /* AppDelegate.swift */; };
 		3A8F011F24C4660E006E4734 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F011E24C4660E006E4734 /* SceneDelegate.swift */; };
 		3A8F012124C4660E006E4734 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F012024C4660E006E4734 /* InfoViewController.swift */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		3A20DE0E24C6E93E006E6FE4 /* LifeStyleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeStyleTableViewCell.swift; sourceTree = "<group>"; };
 		3A20DE1024C6EEF5006E6FE4 /* LifeStyleDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeStyleDetailedViewController.swift; sourceTree = "<group>"; };
+		3A20DE1324C86A96006E6FE4 /* WorldNewAndWSJD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldNewAndWSJD.swift; sourceTree = "<group>"; };
 		3A8F011924C4660E006E4734 /* Lago.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lago.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8F011C24C4660E006E4734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A8F011E24C4660E006E4734 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,14 @@
 				3A20DE1024C6EEF5006E6FE4 /* LifeStyleDetailedViewController.swift */,
 			);
 			path = LifeStyle;
+			sourceTree = "<group>";
+		};
+		3A20DE1524C86A9D006E6FE4 /* WorldNewAndWSJD */ = {
+			isa = PBXGroup;
+			children = (
+				3A20DE1324C86A96006E6FE4 /* WorldNewAndWSJD.swift */,
+			);
+			path = WorldNewAndWSJD;
 			sourceTree = "<group>";
 		};
 		3A8F011024C4660E006E4734 = {
@@ -161,6 +171,7 @@
 			children = (
 				3A8F012224C4660E006E4734 /* FeedsViewController.swift */,
 				3A20DE1224C6EF1D006E6FE4 /* LifeStyle */,
+				3A20DE1524C86A9D006E6FE4 /* WorldNewAndWSJD */,
 			);
 			path = "Feed view controllers";
 			sourceTree = "<group>";
@@ -337,6 +348,7 @@
 				3A8F012124C4660E006E4734 /* InfoViewController.swift in Sources */,
 				3A8F014D24C615E3006E4734 /* WorldNewXMLDelegate.swift in Sources */,
 				3A20DE0F24C6E93E006E6FE4 /* LifeStyleTableViewCell.swift in Sources */,
+				3A20DE1424C86A96006E6FE4 /* WorldNewAndWSJD.swift in Sources */,
 				3A8F013824C4B297006E4734 /* NetworkManager.swift in Sources */,
 				3A8F011D24C4660E006E4734 /* AppDelegate.swift in Sources */,
 				3A8F011F24C4660E006E4734 /* SceneDelegate.swift in Sources */,

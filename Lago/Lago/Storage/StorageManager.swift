@@ -8,7 +8,8 @@
 
 import Foundation
 
-typealias FeedStorageUpdateCompletion<DataType> = ([DataType]) -> ()
+typealias FeedStorageLifeStyleUpdateCompletion = ([LifeStyle]) -> ()
+typealias FeedStorageWorldNewsAndWSJDUpdatedCompletion = ([WorldNews], [RSSWSJD]) -> ()
 
 protocol FeedsStorageProtocol: class {
     var lifeStyleModels: [LifeStyle] { get }
@@ -18,17 +19,16 @@ protocol FeedsStorageProtocol: class {
     func setupLifeStyleModels(lifeStyleModels: [LifeStyle])
     func setupRSSWSJDModels(RSSWSJDModels: [RSSWSJD])
     func setupWorldNewsModels(worldNewsModels: [WorldNews])
+    func setupWorldNewsAndWSJDUpdated()
     
-    var lifeStyleModelsUpdated: FeedStorageUpdateCompletion<LifeStyle>? { get set }
-    var RSSWSJDModelsUpdated: FeedStorageUpdateCompletion<RSSWSJD>? { get set }
-    var worldNewsModelsUpdated: FeedStorageUpdateCompletion<WorldNews>? { get set }
+    var lifeStyleModelsUpdated:FeedStorageLifeStyleUpdateCompletion? { get set }
+    var worldNewsAndWSJDUpdated: FeedStorageWorldNewsAndWSJDUpdatedCompletion? { get set }
 }
 
 class FeedsStorageManager: FeedsStorageProtocol {
     
-    var RSSWSJDModelsUpdated: FeedStorageUpdateCompletion<RSSWSJD>?
-    var worldNewsModelsUpdated: FeedStorageUpdateCompletion<WorldNews>?
-    var lifeStyleModelsUpdated: FeedStorageUpdateCompletion<LifeStyle>?
+    var lifeStyleModelsUpdated: FeedStorageLifeStyleUpdateCompletion?
+    var worldNewsAndWSJDUpdated: FeedStorageWorldNewsAndWSJDUpdatedCompletion?
     
     private(set) var lifeStyleModels = [LifeStyle]()
     private(set) var RSSWSJDModels = [RSSWSJD]()
@@ -37,18 +37,23 @@ class FeedsStorageManager: FeedsStorageProtocol {
     func setupLifeStyleModels(lifeStyleModels: [LifeStyle]) {
         DispatchQueue.main.async {
             self.lifeStyleModels = lifeStyleModels
+            if let updateAction = self.lifeStyleModelsUpdated {
+                updateAction(lifeStyleModels)
+            }
         }
     }
     
     func setupRSSWSJDModels(RSSWSJDModels: [RSSWSJD]) {
-        DispatchQueue.main.async {
-            self.RSSWSJDModels = RSSWSJDModels
-        }
+        self.RSSWSJDModels = RSSWSJDModels
     }
     
     func setupWorldNewsModels(worldNewsModels: [WorldNews]) {
-        DispatchQueue.main.async {
-            self.worldNewsModels = worldNewsModels
+        self.worldNewsModels = worldNewsModels
+    }
+    
+    func setupWorldNewsAndWSJDUpdated() {
+        if let updateAction = self.worldNewsAndWSJDUpdated {
+            updateAction(self.worldNewsModels, self.RSSWSJDModels)
         }
     }
 }
