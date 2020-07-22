@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol TitleSelectionDelegate {
+    var delegate: InfoUpdateTitleProtocol { get set }
+}
+
 class FeedsViewController: UIViewController {
     
     enum SegmentType: Int {
@@ -19,6 +23,8 @@ class FeedsViewController: UIViewController {
     @IBOutlet weak var businessNewsViewContainer: UIView!
     @IBOutlet weak var EntertainmentAndEnvironmentViewContainer: UIView!
     
+    var currentDelegate: TitleSelectionDelegate!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
@@ -27,6 +33,10 @@ class FeedsViewController: UIViewController {
     @IBAction func segmentedControllValueChanged(_ sender: UISegmentedControl) {
         guard let selectedSegment = SegmentType(rawValue: sender.selectedSegmentIndex) else { return }
         self.updateSelectedSegment(segment: selectedSegment)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
     }
 }
 
@@ -40,9 +50,11 @@ private extension FeedsViewController {
     private func updateSelectedSegment(segment: SegmentType) {
         switch segment {
         case .businessNews:
+            //currentDelegate =  businessNews View controller
             businessNewsViewContainer.isHidden = false
             EntertainmentAndEnvironmentViewContainer.isHidden = true
         case .entertainmentAndEnvironment:
+            //currentDelegate = EntertainmentAndEnvironment View Controller
             businessNewsViewContainer.isHidden = true
             EntertainmentAndEnvironmentViewContainer.isHidden = false
         }

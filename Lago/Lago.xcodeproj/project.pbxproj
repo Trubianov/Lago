@@ -10,6 +10,7 @@
 		3A20DE0F24C6E93E006E6FE4 /* LifeStyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20DE0E24C6E93E006E6FE4 /* LifeStyleTableViewCell.swift */; };
 		3A20DE1124C6EEF5006E6FE4 /* LifeStyleDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20DE1024C6EEF5006E6FE4 /* LifeStyleDetailedViewController.swift */; };
 		3A20DE1424C86A96006E6FE4 /* WorldNewAndWSJD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20DE1324C86A96006E6FE4 /* WorldNewAndWSJD.swift */; };
+		3A20DE1724C8794E006E6FE4 /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20DE1624C8794E006E6FE4 /* MainTabbarController.swift */; };
 		3A8F011D24C4660E006E4734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F011C24C4660E006E4734 /* AppDelegate.swift */; };
 		3A8F011F24C4660E006E4734 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F011E24C4660E006E4734 /* SceneDelegate.swift */; };
 		3A8F012124C4660E006E4734 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F012024C4660E006E4734 /* InfoViewController.swift */; };
@@ -36,6 +37,7 @@
 		3A20DE0E24C6E93E006E6FE4 /* LifeStyleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeStyleTableViewCell.swift; sourceTree = "<group>"; };
 		3A20DE1024C6EEF5006E6FE4 /* LifeStyleDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeStyleDetailedViewController.swift; sourceTree = "<group>"; };
 		3A20DE1324C86A96006E6FE4 /* WorldNewAndWSJD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldNewAndWSJD.swift; sourceTree = "<group>"; };
+		3A20DE1624C8794E006E6FE4 /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
 		3A8F011924C4660E006E4734 /* Lago.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lago.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8F011C24C4660E006E4734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A8F011E24C4660E006E4734 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			children = (
 				3A8F012024C4660E006E4734 /* InfoViewController.swift */,
 				3A8F013F24C5F5B5006E4734 /* Feed view controllers */,
+				3A20DE1624C8794E006E6FE4 /* MainTabbarController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A8F014F24C622CD006E4734 /* LifeStyelTableViewDataSource.swift in Sources */,
+				3A20DE1724C8794E006E6FE4 /* MainTabbarController.swift in Sources */,
 				3A8F014924C60FAA006E4734 /* RSSWSJD.swift in Sources */,
 				3A8F012324C4660E006E4734 /* FeedsViewController.swift in Sources */,
 				3A8F014724C60EA8006E4734 /* RSSWSJDXMLDelegate.swift in Sources */,

@@ -46,6 +46,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="selectedtTitleLabel" destination="dB0-G2-UTh" id="3g0-eD-csf"/>
                         <outlet property="timeLabel" destination="A5M-7J-77L" id="T7l-Sw-kFT"/>
                     </connections>
                 </viewController>

@@ -8,9 +8,15 @@
 
 import UIKit
 
-class InfoViewController: UIViewController {
+protocol InfoUpdateTitleProtocol {
+    func itemSelected(title: String)
+}
 
+class InfoViewController: UIViewController {
+    
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var selectedtTitleLabel: UILabel!
+    
     let timer = DispatchSource.makeTimerSource()
     
     override func viewDidLoad() {
@@ -35,6 +41,12 @@ class InfoViewController: UIViewController {
     deinit {
         timer.setEventHandler(handler: nil)
         timer.cancel()
+    }
+}
+
+extension InfoViewController: InfoUpdateTitleProtocol {
+    func itemSelected(title: String) {
+        selectedtTitleLabel.text = title
     }
 }
 
