@@ -11,6 +11,7 @@ import UIKit
 class LifeStyleViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     let dataSource = LifeStyelTableViewDataSource()
     private var selectedLifeStyleItem: LifeStyle?
@@ -25,10 +26,12 @@ class LifeStyleViewController: UIViewController {
     private func setupDataSource() {
         if let items = self.storage?.lifeStyleModels {
             dataSource.setup(lifeStyleItems: items)
+            self.reloadData()
         }
         
         self.storage?.lifeStyleModelsUpdated = { [weak self] lifeStyleModels in
             self?.dataSource.setup(lifeStyleItems: lifeStyleModels)
+            self?.reloadData()
         }
     }
     
@@ -36,6 +39,14 @@ class LifeStyleViewController: UIViewController {
         if segue.identifier == "LifeStyleDetails",
             let lifeStyleDetailedController = segue.destination as? LifeStyleDetailedViewController {
             lifeStyleDetailedController.lifeStyle = self.selectedLifeStyleItem
+        }
+    }
+    
+    func reloadData() {
+        self.activityIndicator.isHidden = false
+        self.tableView.reloadData()
+        DispatchQueue.main.async {
+            self.activityIndicator.isHidden = true
         }
     }
 }

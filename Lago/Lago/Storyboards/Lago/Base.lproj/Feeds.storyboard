@@ -103,17 +103,23 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="1fv-ej-boD">
+                                <rect key="frame" x="180.5" y="367" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="E51-67-Xp4" firstAttribute="trailing" secondItem="dAm-bP-e9x" secondAttribute="trailing" id="CiD-KO-uu2"/>
                             <constraint firstItem="E51-67-Xp4" firstAttribute="top" secondItem="cS1-us-Omf" secondAttribute="top" id="ERc-MV-G6e"/>
+                            <constraint firstItem="1fv-ej-boD" firstAttribute="centerX" secondItem="E51-67-Xp4" secondAttribute="centerX" id="JGm-cN-Cw7"/>
                             <constraint firstItem="E51-67-Xp4" firstAttribute="leading" secondItem="dAm-bP-e9x" secondAttribute="leading" id="i3O-a5-OLN"/>
+                            <constraint firstItem="1fv-ej-boD" firstAttribute="centerY" secondItem="E51-67-Xp4" secondAttribute="centerY" id="lyT-OW-QqX"/>
                             <constraint firstItem="E51-67-Xp4" firstAttribute="bottom" secondItem="dAm-bP-e9x" secondAttribute="bottom" id="ucg-cm-vQe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dAm-bP-e9x"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="1fv-ej-boD" id="Jiq-ng-zXp"/>
                         <outlet property="tableView" destination="E51-67-Xp4" id="9Dr-lg-Zyz"/>
                     </connections>
                 </viewController>
