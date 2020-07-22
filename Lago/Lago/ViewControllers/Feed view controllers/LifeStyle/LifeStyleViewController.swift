@@ -28,11 +28,19 @@ class LifeStyleViewController: UIViewController {
             dataSource.setup(lifeStyleItems: items)
             self.reloadData()
         }
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.storage?.lifeStyleModelsUpdated = { [weak self] lifeStyleModels in
             self?.dataSource.setup(lifeStyleItems: lifeStyleModels)
             self?.reloadData()
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.storage?.lifeStyleModelsUpdated = nil
+        super.viewWillDisappear(animated)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
